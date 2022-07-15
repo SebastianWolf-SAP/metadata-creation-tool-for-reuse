@@ -19,7 +19,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ input.repository_url }}
+    - ${{ inputs.repository_url }}
   env:
     GITHUB_ACCESS_TOKEN: ${{ inputs.access_token }}
     COPYRIGHT_OWNER: ${{ inputs.copyright_owner }}
