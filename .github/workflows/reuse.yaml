@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: SebastianWolf-SAP/metadata-creation-tool-for-reuse@main
         with:
+          repository_url: "${{ github.server_url }}/${{ github.repository }}"
           access_token: "${{ secrets.REUSE_ACCESS_TOKEN }}"
           copyright_owner: "Onkel Hugo"
           upstream_contact: "Onkel Hugo <onkel@hugo.com>"
