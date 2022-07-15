@@ -16,7 +16,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ github.server_url }}/${{ github.repository }}
+    - "${{ github.server_url }}/${{ github.repository }}"
   env:
     GITHUB_ACCESS_TOKEN: ${{ inputs.access_token }}
     COPYRIGHT_OWNER: ${{ inputs.copyright_owner }}

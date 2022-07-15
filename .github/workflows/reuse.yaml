@@ -1,0 +1,14 @@
+name: "Launch Metadata Creation Tool for REUSE"
+on:
+  workflow_dispatch: ~
+
+jobs:
+  create_metadata_proposal:
+    runs-on: ubuntu-latest
+    name: "Metadata Creation Tool"
+    steps:
+      - uses: SebastianWolf-SAP/metadata-creation-tool-for-reuse@main
+        with:
+          access_token: "${{ secrets.REUSE_ACCESS_TOKEN }}"
+          copyright_owner: "Onkel Hugo"
+          upstream_contact: "Onkel Hugo <onkel@hugo.com>"
